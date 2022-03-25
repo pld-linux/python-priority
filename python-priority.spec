@@ -8,7 +8,7 @@ Summary:	A HTTP/2 Priority Implementation
 Summary(pl.UTF-8):	Implementacja priorytetów HTTP/2
 Name:		python-priority
 Version:	1.3.0
-Release:	2
+Release:	3
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/priority/
