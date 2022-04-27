@@ -7,6 +7,8 @@
 Summary:	A HTTP/2 Priority Implementation
 Summary(pl.UTF-8):	Implementacja priorytetów HTTP/2
 Name:		python-priority
+# keep 1.x here for python2 support
+# also beware of twisted compatibility (even 22.4.0 is not ready for priority 2.x)
 Version:	1.3.0
 Release:	5
 License:	MIT
@@ -80,6 +82,7 @@ uruchomione na pojedynczym połączeniu HTTP/2.
 
 %if %{with tests}
 # test_period_of_repetition seems unreliable (too sensitive to system load)
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 PYTHONPATH=$(pwd)/src \
 %{__python} -m pytest test -k 'not test_period_of_repetition'
 %endif
@@ -89,6 +92,7 @@ PYTHONPATH=$(pwd)/src \
 %py3_build
 
 %if %{with tests}
+PYTEST_DISABLE_PLUGIN_AUTOLOAD=1 \
 PYTHONPATH=$(pwd)/src \
 %{__python3} -m pytest test -k 'not test_period_of_repetition'
 %endif
