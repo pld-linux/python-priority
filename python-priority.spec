@@ -10,7 +10,7 @@ Name:		python-priority
 # keep 1.x here for python2 support
 # also beware of twisted compatibility (even 22.4.0 is not ready for priority 2.x)
 Version:	1.3.0
-Release:	6
+Release:	7
 License:	MIT
 Group:		Libraries/Python
 #Source0Download: https://pypi.org/simple/priority/
